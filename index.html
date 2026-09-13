@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,25 +20,28 @@
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕉️</text></svg>"
   />
 
-  <!-- Fonts -->
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  />
+  <!-- =====================================================
+       GOOGLE FONTS
+       ===================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link
     rel="preconnect"
     href="https://fonts.gstatic.com"
     crossorigin
-  />
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Martel:wght@400;700;800;900&family=Hind:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
-  />
+  >
 
 
-  <!-- Tailwind CSS -->
+  <!-- =====================================================
+       TAILWIND CSS
+       ===================================================== -->
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -65,4 +69,984 @@
             maroon:
               '#7A2331',
 
-            mar
+            maroonDeep:
+              '#5C1A25',
+
+            ink:
+              '#2B1D14',
+
+            indigo:
+              '#233B5C'
+
+          },
+
+          fontFamily: {
+
+            display: [
+              'Martel',
+              'serif'
+            ],
+
+            sans: [
+              'Hind',
+              'ui-sans-serif',
+              'system-ui'
+            ]
+
+          }
+
+        }
+
+      }
+
+    };
+
+  </script>
+
+
+  <!-- =====================================================
+       SEPARATE CSS FILE
+       ===================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body
+  class="bg-cream text-ink font-sans antialiased"
+>
+
+
+  <!-- =====================================================
+       HERO SECTION
+       ===================================================== -->
+
+  <header
+    class="relative overflow-hidden border-b border-saffron/30"
+  >
+
+
+    <!-- Sun-ray backdrop -->
+
+    <svg
+      class="pointer-events-none select-none absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/6 opacity-[0.14]"
+      width="900"
+      height="900"
+      viewBox="0 0 900 900"
+      fill="none"
+      aria-hidden="true"
+    >
+
+      <g
+        stroke="#B85C0E"
+        stroke-width="2"
+      >
+
+        <circle
+          cx="450"
+          cy="380"
+          r="180"
+        />
+
+        <circle
+          cx="450"
+          cy="380"
+          r="230"
+        />
+
+        <circle
+          cx="450"
+          cy="380"
+          r="280"
+        />
+
+      </g>
+
+
+      <g
+        stroke="#E1861A"
+        stroke-width="3"
+      >
+
+        <g id="rays"></g>
+
+      </g>
+
+    </svg>
+
+
+    <div
+      class="relative max-w-3xl mx-auto px-6 pt-20 pb-16 text-center hero-enter"
+    >
+
+
+      <p
+        class="text-sm tracking-wide text-maroon/70 font-medium mb-3"
+      >
+        Chapter and verse, in Sanskrit,
+        Hindi and English
+      </p>
+
+
+      <h1
+        class="font-display font-800 text-5xl sm:text-6xl text-maroon leading-tight"
+      >
+        श्रीमद्भगवद्गीता
+      </h1>
+
+
+      <p
+        class="mt-2 font-display text-xl sm:text-2xl text-saffronDeep"
+      >
+        The Bhagavad Gita
+      </p>
+
+
+      <p
+        class="mt-6 text-ink/80 text-lg leading-relaxed max-w-xl mx-auto"
+      >
+        Eighteen chapters, seven hundred verses —
+        Krishna's counsel to Arjuna on the field
+        of Kurukshetra, read here shloka by shloka
+        in the language it was spoken in, and the
+        languages we speak today.
+      </p>
+
+
+      <!-- =================================================
+           KRISHNA ARJUNA IMAGE
+           ================================================= -->
+
+      <img
+        src="krishna-arjuna.png.png"
+        alt="Krishna and Arjuna"
+        class="hero-image"
+      >
+
+
+      <!-- =================================================
+           HERO VERSE
+           ================================================= -->
+
+      <blockquote
+        id="hero-verse"
+        class="hidden mt-8 mx-auto max-w-lg border-l-2 border-saffron pl-4 text-left"
+      >
+
+        <p
+          id="hero-verse-text"
+          class="font-display text-ink/90 devanagari-line"
+        ></p>
+
+        <footer
+          id="hero-verse-ref"
+          class="mt-2 text-sm text-maroon/70"
+        ></footer>
+
+      </blockquote>
+
+
+      <!-- =================================================
+           HERO ACTIONS
+           ================================================= -->
+
+      <div
+        class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3"
+      >
+
+        <a
+          href="#library"
+          class="inline-flex items-center rounded-md bg-maroon px-6 py-3 text-paper font-medium hover:bg-maroonDeep transition-colors"
+        >
+          Begin reading
+        </a>
+
+
+        <form
+          id="search-form"
+          class="flex items-center gap-2"
+          role="search"
+          aria-label="Look up a verse by chapter and number"
+        >
+
+          <label
+            for="search-input"
+            class="sr-only"
+          >
+            Chapter and verse, like 2.47
+          </label>
+
+
+          <input
+            id="search-input"
+            type="text"
+            inputmode="numeric"
+            placeholder="Jump to a verse — e.g. 2.47"
+            class="w-56 rounded-md border border-saffron/50 bg-paper px-4 py-3 text-sm placeholder:text-ink/40 focus:border-maroon"
+          />
+
+
+          <button
+            type="submit"
+            class="rounded-md border border-maroon px-4 py-3 text-sm font-medium text-maroon hover:bg-maroon hover:text-paper transition-colors"
+          >
+            Go
+          </button>
+
+        </form>
+
+      </div>
+
+
+      <p
+        id="search-hint"
+        class="mt-2 text-xs text-ink/50 h-4"
+      ></p>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN LIBRARY
+       ===================================================== -->
+
+  <main
+    id="library"
+    class="max-w-6xl mx-auto px-4 sm:px-6 py-12"
+  >
+
+
+    <h2
+      class="font-display text-2xl text-maroon mb-6"
+    >
+      The eighteen chapters
+    </h2>
+
+
+    <div
+      class="grid md:grid-cols-[300px_1fr] gap-0 border border-saffron/30 rounded-lg overflow-hidden bg-paper shadow-sm"
+    >
+
+
+      <!-- =================================================
+           TABLE OF CONTENTS
+           ================================================= -->
+
+      <nav
+        aria-label="Chapters"
+        class="border-b md:border-b-0 md:border-r border-saffron/30 bg-[#FBF2E1]"
+      >
+
+        <ul
+          id="toc-list"
+          class="max-h-[480px] md:max-h-[620px] overflow-y-auto divide-y divide-saffron/15"
+        >
+
+          <li
+            class="p-4 text-sm text-ink/40"
+          >
+            Loading chapters…
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <!-- =================================================
+           READING PANE
+           ================================================= -->
+
+      <section
+        aria-live="polite"
+        class="p-6 sm:p-8"
+      >
+
+
+        <!-- Chapter header -->
+
+        <div
+          id="chapter-header"
+          class="mb-6"
+        >
+
+          <p
+            class="text-sm text-ink/40"
+          >
+            Select a chapter to begin
+          </p>
+
+        </div>
+
+
+        <!-- Verse picker -->
+
+        <div
+          id="verse-picker"
+          class="flex flex-wrap gap-2 mb-8"
+        ></div>
+
+
+        <!-- Verse content -->
+
+        <div
+          id="verse-content"
+        >
+
+          <p
+            class="text-ink/50 italic"
+          >
+            Choose a chapter and verse on
+            the left, or jump straight to one
+            with the search box above.
+          </p>
+
+        </div>
+
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <!-- =====================================================
+       ADVANCED TOOLBAR
+       ===================================================== -->
+
+  <div
+    class="gita-tools"
+  >
+
+    <div
+      class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3"
+    >
+
+
+      <div
+        class="flex items-center gap-2"
+      >
+
+        <span
+          class="pulse-dot"
+        ></span>
+
+
+        <span
+          class="text-sm font-medium"
+        >
+          Gita Reading Space
+        </span>
+
+      </div>
+
+
+      <div
+        class="flex flex-wrap gap-2"
+      >
+
+        <button
+          class="tool-btn"
+          id="themeToggle"
+        >
+          🌙 Dark
+        </button>
+
+
+        <button
+          class="tool-btn"
+          id="fontToggle"
+        >
+          Aa Text
+        </button>
+
+
+        <button
+          class="tool-btn"
+          id="focusToggle"
+        >
+          🎯 Focus
+        </button>
+
+
+        <button
+          class="tool-btn"
+          id="savedBtn"
+        >
+          ❤️ Saved
+          <span id="savedCount">0</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       PERSONAL DASHBOARD
+       ===================================================== -->
+
+  <section
+    class="max-w-6xl mx-auto px-4 sm:px-6 pt-10"
+  >
+
+    <div
+      class="advanced-card p-5 sm:p-7"
+    >
+
+
+      <div
+        class="flex flex-col md:flex-row md:items-center md:justify-between gap-5"
+      >
+
+
+        <div>
+
+          <p
+            class="text-xs uppercase tracking-widest text-saffronDeep font-bold"
+          >
+            Your Gita Journey
+          </p>
+
+
+          <h2
+            class="font-display text-2xl text-maroon mt-1"
+          >
+            Read. Reflect. Practice.
+          </h2>
+
+
+          <p
+            class="text-sm text-ink/60 mt-1"
+          >
+            Your progress stays on this device.
+          </p>
+
+        </div>
+
+
+        <div
+          class="grid grid-cols-3 gap-3 min-w-[280px]"
+        >
+
+          <div
+            class="text-center rounded-xl bg-cream/70 p-3"
+          >
+
+            <div
+              id="dashStreak"
+              class="text-xl font-bold text-maroon"
+            >
+              0
+            </div>
+
+            <div
+              class="text-xs text-ink/50"
+            >
+              Day streak
+            </div>
+
+          </div>
+
+
+          <div
+            class="text-center rounded-xl bg-cream/70 p-3"
+          >
+
+            <div
+              id="dashSaved"
+              class="text-xl font-bold text-maroon"
+            >
+              0
+            </div>
+
+            <div
+              class="text-xs text-ink/50"
+            >
+              Saved
+            </div>
+
+          </div>
+
+
+          <div
+            class="text-center rounded-xl bg-cream/70 p-3"
+          >
+
+            <div
+              id="dashRead"
+              class="text-xl font-bold text-maroon"
+            >
+              0
+            </div>
+
+            <div
+              class="text-xs text-ink/50"
+            >
+              Verses read
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="mt-5"
+      >
+
+        <div
+          class="flex justify-between text-xs text-ink/50 mb-2"
+        >
+
+          <span>
+            18-chapter journey
+          </span>
+
+
+          <span
+            id="journeyPercent"
+          >
+            0%
+          </span>
+
+        </div>
+
+
+        <div
+          class="h-2 rounded-full bg-saffron/15 overflow-hidden"
+        >
+
+          <div
+            id="journeyBar"
+            class="h-full rounded-full bg-maroon transition-all"
+            style="width:0%"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       WISDOM FINDER
+       ===================================================== -->
+
+  <section
+    class="max-w-6xl mx-auto px-4 sm:px-6 pt-8"
+  >
+
+    <div
+      class="advanced-card p-6 sm:p-8"
+    >
+
+
+      <div
+        class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3"
+      >
+
+
+        <div>
+
+          <p
+            class="text-xs uppercase tracking-widest text-saffronDeep font-bold"
+          >
+            Wisdom Finder
+          </p>
+
+
+          <h2
+            class="font-display text-2xl text-maroon mt-1"
+          >
+            What are you feeling today?
+          </h2>
+
+
+          <p
+            class="text-sm text-ink/60 mt-1"
+          >
+            Choose a feeling and discover
+            a relevant Gita verse.
+          </p>
+
+        </div>
+
+
+        <span
+          class="text-xs text-ink/40"
+        >
+          Personal guidance • not AI-generated
+        </span>
+
+      </div>
+
+
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mt-5"
+      >
+
+        <button
+          class="feeling-btn"
+          data-feeling="confused"
+        >
+          😕
+          <br>
+          <span class="text-sm">
+            Confused
+          </span>
+        </button>
+
+
+        <button
+          class="feeling-btn"
+          data-feeling="sad"
+        >
+          😔
+          <br>
+          <span class="text-sm">
+            Sad
+          </span>
+        </button>
+
+
+        <button
+          class="feeling-btn"
+          data-feeling="angry"
+        >
+          😠
+          <br>
+          <span class="text-sm">
+            Angry
+          </span>
+        </button>
+
+
+        <button
+          class="feeling-btn"
+          data-feeling="stress"
+        >
+          😣
+          <br>
+          <span class="text-sm">
+            Stressed
+          </span>
+        </button>
+
+
+        <button
+          class="feeling-btn"
+          data-feeling="fear"
+        >
+          😨
+          <br>
+          <span class="text-sm">
+            Fear
+          </span>
+        </button>
+
+
+        <button
+          class="feeling-btn"
+          data-feeling="peace"
+        >
+          🕊️
+          <br>
+          <span class="text-sm">
+            Peace
+          </span>
+        </button>
+
+      </div>
+
+
+      <div
+        id="wisdomResult"
+        class="hidden mt-5 rounded-2xl bg-cream p-5 border border-saffron/20"
+      ></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       DAILY PRACTICE + REAL LIFE
+       ===================================================== -->
+
+  <section
+    class="max-w-6xl mx-auto px-4 sm:px-6 pt-8"
+  >
+
+    <div
+      class="grid lg:grid-cols-2 gap-5"
+    >
+
+
+      <div
+        class="advanced-card feature-card p-6"
+      >
+
+        <p
+          class="text-xs uppercase tracking-widest text-saffronDeep font-bold"
+        >
+          Daily Wisdom
+        </p>
+
+
+        <h3
+          id="dailyTitle"
+          class="font-display text-xl text-maroon mt-2"
+        >
+          Today's reflection
+        </h3>
+
+
+        <p
+          id="dailyText"
+          class="mt-3 leading-relaxed text-ink/70"
+        ></p>
+
+
+        <button
+          id="dailyReadBtn"
+          class="tool-btn mt-4"
+        >
+          📖 Read verse
+        </button>
+
+      </div>
+
+
+      <div
+        class="advanced-card feature-card p-6"
+      >
+
+        <p
+          class="text-xs uppercase tracking-widest text-saffronDeep font-bold"
+        >
+          Gita for Real Life
+        </p>
+
+
+        <h3
+          class="font-display text-xl text-maroon mt-2"
+        >
+          One idea to practice today
+        </h3>
+
+
+        <p
+          id="lifeText"
+          class="mt-3 leading-relaxed text-ink/70"
+        ></p>
+
+
+        <button
+          id="newLifeBtn"
+          class="tool-btn mt-4"
+        >
+          ✨ New idea
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CHAPTER JOURNEY
+       ===================================================== -->
+
+  <section
+    class="max-w-6xl mx-auto px-4 sm:px-6 pt-8"
+  >
+
+    <div
+      class="advanced-card p-6"
+    >
+
+
+      <div
+        class="flex items-end justify-between gap-3"
+      >
+
+        <div>
+
+          <p
+            class="text-xs uppercase tracking-widest text-saffronDeep font-bold"
+          >
+            Chapter Journey
+          </p>
+
+
+          <h2
+            class="font-display text-2xl text-maroon mt-1"
+          >
+            18 steps through the Gita
+          </h2>
+
+        </div>
+
+
+        <span
+          class="text-sm text-ink/50"
+        >
+          Click a chapter
+        </span>
+
+      </div>
+
+
+      <div
+        id="chapterJourney"
+        class="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-9 gap-2 mt-5"
+      ></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       QUIZ
+       ===================================================== -->
+
+  <section
+    class="max-w-6xl mx-auto px-4 sm:px-6 pt-8"
+  >
+
+    <div
+      class="advanced-card p-6"
+    >
+
+
+      <div
+        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+      >
+
+        <div>
+
+          <p
+            class="text-xs uppercase tracking-widest text-saffronDeep font-bold"
+          >
+            Gita Challenge
+          </p>
+
+
+          <h2
+            class="font-display text-2xl text-maroon mt-1"
+          >
+            Test your knowledge
+          </h2>
+
+        </div>
+
+
+        <button
+          id="quizStart"
+          class="tool-btn"
+        >
+          🧠 Start Quiz
+        </button>
+
+      </div>
+
+
+      <div
+        id="quizBox"
+        class="hidden mt-5"
+      ></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       SAVED VERSES MODAL
+       ===================================================== -->
+
+  <div
+    id="savedModal"
+    class="gita-modal"
+    role="dialog"
+    aria-modal="true"
+  >
+
+    <div
+      class="modal-box"
+    >
+
+      <div
+        class="flex justify-between items-center"
+      >
+
+        <h2
+          class="font-display text-2xl text-maroon"
+        >
+          Saved verses
+        </h2>
+
+
+        <button
+          id="closeSaved"
+          class="tool-btn"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+      <div
+        id="savedList"
+        class="mt-5 space-y-3"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer
+    class="border-t border-saffron/30 py-8 text-center text-sm text-ink/50"
+  >
+
+    <p>
+      Built by Rakesh Kumar ·
+      Verses served by the open Bhagavad Gita API
+    </p>
+
+  </footer>
+
+
+  <!-- =====================================================
+       SEPARATE JAVASCRIPT FILE
+       ===================================================== -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
