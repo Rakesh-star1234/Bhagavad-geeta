@@ -1,1 +1,309 @@
+/* ========== BASIC HERO ANIMATION ========== */
 
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-enter {
+  animation: riseIn 0.9s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter {
+    animation: none;
+  }
+}
+
+
+/* ========== CHAPTER LIST SCROLLBAR ========== */
+
+#toc-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+#toc-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#toc-list::-webkit-scrollbar-thumb {
+  background: #E1861A55;
+  border-radius: 4px;
+}
+
+
+/* ========== ACCESSIBILITY FOCUS ========== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #233B5C;
+  outline-offset: 2px;
+}
+
+
+/* ========== TABS ========== */
+
+.tab-underline {
+  position: relative;
+}
+
+.tab-underline.active {
+  color: #7A2331;
+}
+
+.tab-underline.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9px;
+  height: 2px;
+  background: #7A2331;
+}
+
+
+/* ========== VERSE BUTTON ========== */
+
+.verse-pill.active {
+  background: #7A2331;
+  color: #FBF2E1;
+  border-color: #7A2331;
+}
+
+
+/* ========== CHAPTER ACTIVE ========== */
+
+.toc-row.active {
+  background: #F3E2C4;
+  border-left-color: #7A2331;
+}
+
+
+/* ========== DEVANAGARI ========== */
+
+.devanagari-line {
+  line-height: 2.1;
+}
+
+
+/* ========== ADVANCED GITA EXPERIENCE ========== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.gita-tools {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(12px);
+  background: rgba(251, 242, 225, 0.88);
+  border-bottom: 1px solid rgba(225, 134, 26, 0.22);
+}
+
+.tool-btn {
+  border: 1px solid rgba(122, 35, 49, 0.18);
+  background: rgba(255, 252, 246, 0.82);
+  color: #7A2331;
+  border-radius: 999px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.82rem;
+  transition: 0.2s;
+}
+
+.tool-btn:hover {
+  transform: translateY(-1px);
+  border-color: #7A2331;
+  box-shadow: 0 5px 16px rgba(92, 26, 37, 0.08);
+}
+
+.advanced-card {
+  border: 1px solid rgba(225, 134, 26, 0.25);
+  background: rgba(255, 252, 246, 0.86);
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(92, 26, 37, 0.06);
+}
+
+.feature-card {
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(92, 26, 37, 0.1);
+}
+
+.feeling-btn {
+  border: 1px solid rgba(225, 134, 26, 0.3);
+  border-radius: 12px;
+  padding: 0.8rem 0.7rem;
+  background: #FFFCF6;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.feeling-btn:hover {
+  border-color: #7A2331;
+  transform: translateY(-2px);
+}
+
+.gita-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(43, 29, 20, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gita-modal.show {
+  display: flex;
+}
+
+.modal-box {
+  max-width: 560px;
+  width: 100%;
+  max-height: 85vh;
+  overflow: auto;
+  background: #FFFCF6;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode {
+  background: #17120f !important;
+  color: #f7ead8 !important;
+}
+
+.dark-mode .gita-tools {
+  background: rgba(23, 18, 15, 0.9);
+}
+
+.dark-mode .advanced-card,
+.dark-mode .feature-card,
+.dark-mode .modal-box,
+.dark-mode .tool-btn {
+  background: #211914;
+  color: #f7ead8;
+  border-color: #68432d;
+}
+
+.dark-mode .text-ink,
+.dark-mode .text-ink\/80,
+.dark-mode .text-ink\/70,
+.dark-mode .text-ink\/60,
+.dark-mode .text-ink\/50,
+.dark-mode .text-ink\/40 {
+  color: #f7ead8 !important;
+}
+
+.dark-mode .toc-row.active {
+  background: #38271d;
+}
+
+.dark-mode nav {
+  background: #1d1511 !important;
+}
+
+.dark-mode .verse-pill {
+  color: #f7ead8;
+  border-color: #795437;
+}
+
+.dark-mode .verse-pill.active {
+  background: #a94757;
+  border-color: #a94757;
+}
+
+.dark-mode .bg-paper {
+  background: #211914 !important;
+}
+
+.dark-mode .bg-cream {
+  background: #17120f !important;
+}
+
+.reading-large #verse-content {
+  font-size: 1.16rem;
+}
+
+.reading-focus #library {
+  max-width: 900px;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E1861A;
+  display: inline-block;
+  box-shadow: 0 0 0 5px rgba(225, 134, 26, 0.12);
+}
+
+
+/* ========== KRISHNA ARJUNA IMAGE ========== */
+
+.hero-image {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+  margin: 2rem auto 0;
+  border-radius: 20px;
+  border: 1px solid rgba(225, 134, 26, 0.3);
+  box-shadow: 0 18px 50px rgba(92, 26, 37, 0.16);
+  object-fit: cover;
+}
+
+
+/* ========== ADVANCED VERSE TOOLS ========== */
+
+#advancedVerseTools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+
+/* ========== QUIZ OPTIONS ========== */
+
+.quiz-option {
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.quiz-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(92, 26, 37, 0.08);
+}
+
+
+/* ========== MOBILE ========== */
+
+@media (max-width: 640px) {
+  .hero-image {
+    border-radius: 14px;
+    margin-top: 1.5rem;
+  }
+
+  .tool-btn {
+    font-size: 0.78rem;
+    padding: 0.5rem 0.7rem;
+  }
+}
