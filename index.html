@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -418,6 +417,191 @@
 
 
   <!-- =====================================================
+       SMART GITA SEARCH — ADDED FEATURE
+       ===================================================== -->
+
+  <section
+    id="smartSearchSection"
+    class="max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-4"
+  >
+
+    <div
+      class="advanced-card p-6 sm:p-8"
+    >
+
+      <div
+        class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3"
+      >
+
+        <div>
+
+          <p
+            class="text-xs uppercase tracking-widest text-saffronDeep font-bold"
+          >
+            Smart Gita Search
+          </p>
+
+          <h2
+            class="font-display text-2xl text-maroon mt-1"
+          >
+            Search by life problem or topic
+          </h2>
+
+          <p
+            class="text-sm text-ink/60 mt-1"
+          >
+            Search topics like karma, stress, fear,
+            anger, peace, success and duty.
+          </p>
+
+        </div>
+
+
+        <span
+          class="text-xs text-ink/40"
+        >
+          Guided verse discovery
+        </span>
+
+      </div>
+
+
+      <!-- SEARCH -->
+
+      <form
+        id="smartSearchForm"
+        class="mt-5 flex flex-col sm:flex-row gap-3"
+      >
+
+        <label
+          for="smartSearchInput"
+          class="sr-only"
+        >
+          Search Gita by topic
+        </label>
+
+
+        <input
+          id="smartSearchInput"
+          type="text"
+          autocomplete="off"
+          placeholder="Try: karma, stress, fear, anger..."
+          class="flex-1 rounded-xl border border-saffron/40 bg-paper px-4 py-3 text-sm focus:border-maroon"
+        >
+
+
+        <button
+          type="submit"
+          class="rounded-xl bg-maroon px-5 py-3 text-paper font-medium hover:bg-maroonDeep transition-colors"
+        >
+          🔎 Search Gita
+        </button>
+
+      </form>
+
+
+      <!-- QUICK TOPICS -->
+
+      <div
+        class="mt-4 flex flex-wrap gap-2"
+        id="smartTopicButtons"
+      >
+
+        <button
+          type="button"
+          class="smart-topic"
+          data-smart-topic="karma"
+        >
+          Karma
+        </button>
+
+
+        <button
+          type="button"
+          class="smart-topic"
+          data-smart-topic="stress"
+        >
+          Stress
+        </button>
+
+
+        <button
+          type="button"
+          class="smart-topic"
+          data-smart-topic="fear"
+        >
+          Fear
+        </button>
+
+
+        <button
+          type="button"
+          class="smart-topic"
+          data-smart-topic="anger"
+        >
+          Anger
+        </button>
+
+
+        <button
+          type="button"
+          class="smart-topic"
+          data-smart-topic="peace"
+        >
+          Peace
+        </button>
+
+
+        <button
+          type="button"
+          class="smart-topic"
+          data-smart-topic="success"
+        >
+          Success
+        </button>
+
+
+        <button
+          type="button"
+          class="smart-topic"
+          data-smart-topic="duty"
+        >
+          Duty
+        </button>
+
+
+        <button
+          type="button"
+          class="smart-topic"
+          data-smart-topic="discipline"
+        >
+          Discipline
+        </button>
+
+      </div>
+
+
+      <p
+        id="smartSearchStatus"
+        class="mt-4 text-sm text-ink/50"
+      >
+        Choose a topic or search for a life problem.
+      </p>
+
+
+      <!-- RESULTS -->
+
+      <div
+        id="smartSearchResults"
+        class="mt-5 grid gap-3"
+      ></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
        ADVANCED TOOLBAR
        ===================================================== -->
 
@@ -438,7 +622,6 @@
           class="pulse-dot"
         ></span>
 
-
         <span
           class="text-sm font-medium"
         >
@@ -451,6 +634,7 @@
       <div
         class="flex flex-wrap gap-2"
       >
+
 
         <button
           class="tool-btn"
@@ -507,7 +691,6 @@
       <div
         class="flex flex-col md:flex-row md:items-center md:justify-between gap-5"
       >
-
 
         <div>
 
@@ -660,7 +843,6 @@
         class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3"
       >
 
-
         <div>
 
           <p
@@ -669,13 +851,11 @@
             Wisdom Finder
           </p>
 
-
           <h2
             class="font-display text-2xl text-maroon mt-1"
           >
             What are you feeling today?
           </h2>
-
 
           <p
             class="text-sm text-ink/60 mt-1"
@@ -795,7 +975,6 @@
     <div
       class="grid lg:grid-cols-2 gap-5"
     >
-
 
       <div
         class="advanced-card feature-card p-6"
